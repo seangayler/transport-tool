@@ -1,1 +1,2 @@
-website/website/secrets.py
+.env
+**/__pycache__/
