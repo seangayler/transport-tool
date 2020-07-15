@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">ISOCHRONE MAPPER</h1>
+    <ul class="header__list">
+      {% block header-links %}
+      {% endblock %}
+    </ul>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <p>Website by <a href="https://github.com/seangayler" target="_blank" class="link-unstyled footer__name">Sean Gayler</a></p>
+  </footer>
+</body>
+
+</html>

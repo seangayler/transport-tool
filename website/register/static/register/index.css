@@ -1,0 +1,13 @@
+.register {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register__title {
+  background-color: green;
+  color: white;
+  padding: 5px;
+}

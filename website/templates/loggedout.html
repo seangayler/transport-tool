@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/loggedout.css' %}">
+  {% block head2 %}
+  {% endblock %}
+{% endblock %}
+
+{% block header-links %}
+  <li class="header__list__item header__list__item--normal"><a href="#" class="link-unstyled">ABOUT</a></li>
+  <li class="header__list__item header__list__item--normal"><a href="#" class="link-unstyled">SIGN IN</a></li>
+  <li class="header__list__item header__list__item--register"><a href="/register" class="link-unstyled">REGISTER</a></li>
+{% endblock %}

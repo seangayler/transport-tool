@@ -1,0 +1,10 @@
+.header__list__item {
+  font-size: 1.8rem;
+  padding-left: 10px;
+}
+.header__list__item--normal:hover {
+  color: lightblue;
+}
+.header__list__item--register:hover {
+  color: lightcoral;
+}
