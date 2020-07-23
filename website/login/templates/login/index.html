@@ -6,11 +6,12 @@
 
 {% block content %}
 <div class="register">
-  <h1 class="register__title">Registration Form</h1>
-  <form action='create_user' method="post">
+  <h1 class="register__title">Login Form</h1>
+  <form action='login_user' method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <input class="form__submit" type="submit" value="Sign up">
+    <input class="form__submit" type="submit" value="Sign in">
+    <input type="hidden" name="next" value="{{ next }}">
   </form>
 </div>
 {% endblock %}

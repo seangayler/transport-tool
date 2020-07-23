@@ -1,5 +1,8 @@
-.register {
+main {
   font-family: "Times New Roman", Times, serif;
+}
+
+.register {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,3 +14,49 @@
   color: white;
   padding: 5px;
 }
+
+/* STYLING FORM ------------------------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-left: 2px solid green;
+  padding-left: 40px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form p label {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  font-weight: 700;
+  margin-bottom: 10px;;
+}
+
+.helptext {
+  margin-top: 10px;
+}
+
+.form__submit {
+  background-color: green;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100px;
+}
+
+.errorlist {
+  color: red;
+}
+/* END STYLING FORM ---------------------------------------------------------------- */

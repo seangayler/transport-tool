@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 def index(request):
+    # Redirect logged in users
+    if request.user.is_authenticated:
+        return redirect('/map')
+
     context = {}
     form = UserCreationForm(None)
     context['form'] = form
@@ -18,6 +19,6 @@ def create_user(request):
         if form.is_valid():
             user = form.save()
             login(request,user)
-            return render(request,'accounts/index.html')
+            return render(request,'map/index.html')
     context['form']=form
-    return render(request,'registration/sign_up.html',context)
+    return render(request,'register/index.html',context)
