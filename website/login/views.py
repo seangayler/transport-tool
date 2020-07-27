@@ -20,6 +20,6 @@ def login_user(request):
     if request.method == "POST":
         if form.is_valid():
             login(request, form.get_user())
-            return render(request,'map/index.html')
+            return redirect('/map')
     context['form']=form
     return render(request,'login/index.html',context)

@@ -1,0 +1,47 @@
+#mapid {
+    height: 60vh;
+    border-top: 10px solid green;
+    border-bottom: 10px solid green;
+}
+
+.map {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* START SEARCH FORM ------------------------------------------------------------------- */
+.search-form {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-form__label {
+    background-color: green;
+    color: #fff;
+    padding: 5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+.search-form__submit {
+    color: #fff;
+    background-color: darkred;
+    font-weight: 700;
+    margin-left: 8px;
+}
+.search-form__submit:hover {
+    cursor: pointer;
+}
+/* END SEARCH FORM --------------------------------------------------------------------- */
+
+.saved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saved__list {
+    padding: 0;
+    list-style: none;
+}

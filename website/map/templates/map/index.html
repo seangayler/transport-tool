@@ -2,10 +2,27 @@
 {% block head2 %}
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'map/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'libs/leaflet/leaflet.css' %}">
+  <script src="{% static 'libs/leaflet/leaflet.js' %}"></script>
 {% endblock %}
 
 {% block content %}
-<div class="">
+  <div class="map">
+    <form action="geocode" method="POST" class="search-form">
+      {% csrf_token %}
+      <label class="search-form__label" for="{{ form.location.id_for_label }}">Location:</label><br>
+      <!-- <input class="search-form__input" type="text" id="location" name="fname"><br> -->
+      {{ form.location }}
+      <input class="search-form__submit" type="submit" value="SEARCH &#8674;">
+    </form>
+    <div id="mapid"></div>
+    <div class="saved">
+      <h2>Saved Isochrones</h2>
+      <ul class="saved__list">
 
-</div>
+      </ul>
+
+    </div>
+  </div>
+  <script src="{% static 'map/index.js' %}"></script>
 {% endblock %}
