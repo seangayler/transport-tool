@@ -11,7 +11,6 @@
     <form action="geocode" method="POST" class="search-form">
       {% csrf_token %}
       <label class="search-form__label" for="{{ form.location.id_for_label }}">Location:</label><br>
-      <!-- <input class="search-form__input" type="text" id="location" name="fname"><br> -->
       {{ form.location }}
       <input class="search-form__submit" type="submit" value="SEARCH &#8674;">
     </form>
